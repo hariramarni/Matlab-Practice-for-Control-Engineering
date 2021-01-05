@@ -1,0 +1,13 @@
+#To determine 1) Step response of 1st order system 2)Impulse response of 1st order system
+#Question:- G(s) = 1/(s+4)
+num = [1]; den = [1 4]
+g = tf (num,den)
+t = feedback(g,1)
+step(t,’r’)
+
+#Question:- G(s) = 1/(s+9)
+num = [1];
+den = [1 9]
+g = tf (num,den)
+t = feedback(g,1)
+impulse(t,‘r’)
