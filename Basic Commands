@@ -1,0 +1,57 @@
+#Create Line Plot
+x = 0:pi/100:2*pi;
+y = sin(x);
+plot(x,y)
+
+#Plot Multiple Lines
+x = linspace(-2*pi,2*pi);
+y1 = sin(x);
+y2 = cos(x);
+figure
+plot(x,y1,x,y2)
+
+#Specify Line Style
+x = 0:pi/100:2*pi;
+y1 = sin(x);
+y2 = sin(x-0.25);
+y3 = sin(x-0.5);
+plot(x,y1,x,y2,'--',x,y3,':')
+
+#Specify Line Style, Color, and Markerfigure
+x = 0:pi/10:2*pi;
+y1 = sin(x);
+y2 = sin(x-0.25);
+y3 = sin(x-0.5);
+plot(x,y1,'g',x,y2,'b--o',x,y3,'c*')
+
+#Add Title and Axis Labels
+x = linspace(0,10,150);
+y = cos(5*x);
+figure
+plot(x,y,'Color’,’k’)
+title('2-D Line Plot')
+xlabel('x')
+ylabel('cos(5x)') 
+
+#Plot Durations and Specify Tick Format
+t = 0:seconds(30):minutes(3);
+y = rand(1,7);
+plot(t,y,'DurationTickFormat','mm:ss’)
+
+#Specify Axes for Line Plot
+x = linspace(0,3);
+y1 = sin(5*x);
+y2 = sin(15*x);
+tiledlayout(2,1)
+
+% Top plot
+ax1 = nexttile;
+plot(ax1,x,y1)
+title(ax1,'Top Plot')
+ylabel(ax1,'sin(5x)’)
+
+% Bottom plot
+ax2 = nexttile;
+plot(ax2,x,y2)
+title(ax2,'Bottom Plot')
+ylabel(ax2,'sin(15x)')
