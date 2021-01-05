@@ -1,0 +1,12 @@
+#Create subplots in matlab
+
+subplot(2,2,1)
+x = linspace(0,10);
+y1 = sin(x);
+plot(x,y1)
+title('Subplot 1: sin(x)')
+
+subplot(2,2,2)
+y2 = sin(2*x);
+plot(x,y2)
+title('Subplot 2: sin(2x)')
